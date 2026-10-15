@@ -1,0 +1,9 @@
+{
+  "name": "onnxruntime-web",
+  "version": "1.30.0",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/Microsoft/onnxruntime.git",
+    "type": "git"
+  }
+}
