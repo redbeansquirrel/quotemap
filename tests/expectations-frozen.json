@@ -1,0 +1,19 @@
+{
+  "frozenAtUtc": "2026-10-15T06:58:30.5174322Z",
+  "basis": "CONTRACT.md only; core.mjs and embeddings.mjs were not read",
+  "files": [
+    {
+      "path": "work/goal-2026-10-15/quotemap/tests/core.test.mjs",
+      "sha256": "02f4c04bb72b63e3d33460f091a4f59c19a468bf9142c935b780b28d7dcebc66"
+    },
+    {
+      "path": "work/goal-2026-10-15/quotemap/tests/semantic-cases.json",
+      "sha256": "c654bc10549e2919790a0d7f9d05a108b1c9aecdf9aaa7d1b181357e74d4192e"
+    }
+  ],
+  "semanticCases": 10,
+  "clearCases": 7,
+  "ambiguousCases": 2,
+  "rejectCases": 1,
+  "executionState": "expectations frozen before first implementation test"
+}

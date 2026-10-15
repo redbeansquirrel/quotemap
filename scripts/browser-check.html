@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QuoteMap real-model verification</title>
+<style>body{font:16px/1.5 system-ui;max-width:1000px;margin:40px auto;padding:0 20px;background:#f6f6f2;color:#152a26}button{font:inherit;padding:12px 20px;background:#12614e;color:white;border:0;border-radius:8px}pre{background:white;border:1px solid #ddd;padding:20px;white-space:pre-wrap;word-break:break-word}#status{font-weight:600}</style>
+<h1>QuoteMap real-model verification</h1><p>Development-only harness. Runs real local WASM inference on synthetic independent cases; no customer data or network inference.</p>
+<button id="run">Run real model checks</button><p id="status" role="status">Ready to run.</p><pre id="report">No results yet.</pre>
+<script type="module">
+import {loadEmbeddingModel,createTokenizer} from '../dist/embeddings.mjs';
+import {cosineMatrix} from '../dist/core.mjs';
+const button=document.querySelector('#run'),status=document.querySelector('#status'),report=document.querySelector('#report');
+button.onclick=async()=>{button.disabled=true;const start=performance.now();try{
+  const [refs,tokenizerJson,fixtures]=await Promise.all([
+    fetch('./tokenizer-reference.json').then(x=>x.json()),
+    fetch('../dist/assets/tokenizer.json').then(x=>x.json()),
+    fetch('../tests/semantic-cases.json').then(x=>x.json())]);
+  const tokenizer=createTokenizer(tokenizerJson);
+  const parity=refs.cases.map(x=>({text:x.text,passed:JSON.stringify(tokenizer.encode(x.text))===JSON.stringify(x.ids)}));
+  const engine=await loadEmbeddingModel(text=>{status.textContent=text;});
+  const semantic=[];
+  for(const test of fixtures.cases){
+    const texts=[test.source,...test.candidates.map(x=>x.description)];
+    const vectors=await engine.encode(texts);const scores=cosineMatrix([vectors[0]],vectors.slice(1))[0];
+    const ranking=test.candidates.map((x,i)=>({id:x.id,description:x.description,score:scores[i]})).sort((a,b)=>b.score-a.score);
+    const best=ranking[0]; const acceptable=test.expected.acceptableCandidateIds??(test.expected.bestCandidateId?[test.expected.bestCandidateId]:[]);
+    semantic.push({id:test.id,kind:test.kind,source:test.source,expected:test.expected,ranking,
+      top1MatchesExpected:test.kind==='clear'?acceptable.includes(best.id):null,
+      suggestionAboveThreshold:best.score>=0.35,ambiguousByGap:ranking.length>1&&best.score-ranking[1].score<0.08});
+    status.textContent=`Evaluated ${semantic.length}/${fixtures.cases.length} independent semantic cases.`;
+  }
+  const clear=semantic.filter(x=>x.kind==='clear');
+  const output={completedAtUtc:new Date().toISOString(),actualRuntime:engine.metadata,userAgent:navigator.userAgent,
+    tokenizerParity:{passed:parity.filter(x=>x.passed).length,total:parity.length,failed:parity.filter(x=>!x.passed)},
+    clearSemanticTop1:{passed:clear.filter(x=>x.top1MatchesExpected).length,total:clear.length},
+    semanticCases:semantic,elapsedMs:Math.round(performance.now()-start),
+    boundary:'Synthetic independent diagnostic cases, not customer testing or a measured business outcome. Ambiguous/reject cases are observations, not counted as accuracy; all matches still require human confirmation.'};
+  report.textContent=JSON.stringify(output,null,2);status.textContent='Real model checks finished.';
+}catch(error){report.textContent=JSON.stringify({error:String(error),stack:error.stack},null,2);status.textContent='Model check failed.';}finally{button.disabled=false;}};
+</script></html>

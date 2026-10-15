@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "title": "Independent synthetic freelance website quote correspondence cases",
+  "frozenFrom": "CONTRACT.md before reading core.mjs or embeddings.mjs",
+  "language": "en",
+  "synthetic": true,
+  "evaluationNotes": [
+    "These are human-authored semantic expectations, not observed model outputs or customer data.",
+    "Run actual model inference and retain every candidate score, rank, recommendedB and ambiguity result.",
+    "For clear cases, measure whether the expected candidate ranks first; report the numerator and denominator.",
+    "For reject and ambiguous cases, report observed behavior separately. Do not fold these labels into a misleading exact-match accuracy metric.",
+    "The core contract uses a 0.35 recommendation threshold and a top-two gap below 0.08 for ambiguity; a human label does not guarantee the model satisfies either threshold.",
+    "Correspondence identifies the type of work. Quantity, exclusions, retention terms and maintenance periods can still make the scopes different.",
+    "Every suggested match requires explicit human confirmation, including clear high-similarity cases.",
+    "Do not tune the model or thresholds on these frozen examples and then present the result as independent validation."
+  ],
+  "cases": [
+    {
+      "id": "responsive-implementation",
+      "kind": "clear",
+      "source": "Turn the approved screen designs into a working website that remains usable on phones, tablets, and desktop computers.",
+      "candidates": [
+        {"id": "brand", "description": "Produce a visual identity package with logo variants and brand colours."},
+        {"id": "implementation", "description": "Implement the supplied layouts with responsive behaviour across screen sizes."},
+        {"id": "audit", "description": "Audit an existing website and deliver a mobile usability report."}
+      ],
+      "expected": {"bestCandidateId": "implementation", "acceptableCandidateIds": ["implementation"], "mustNotAutoConfirm": true, "reviewReasons": []},
+      "rationale": "The deliverable is implementation of supplied designs across devices. A visual identity or an audit report does not supply that deliverable."
+    },
+    {
+      "id": "appointment-booking-integration",
+      "kind": "clear",
+      "source": "Let visitors choose an available consultation slot on the website, using the business's existing Calendly account.",
+      "candidates": [
+        {"id": "custom-system", "description": "Design a bespoke scheduling platform with staff rosters, resource allocation and a new booking database."},
+        {"id": "events", "description": "Create a public events listing with dates, locations and links to event details."},
+        {"id": "embed", "description": "Connect and embed the client's current third-party appointment scheduler so customers can book online."}
+      ],
+      "expected": {"bestCandidateId": "embed", "acceptableCandidateIds": ["embed"], "mustNotAutoConfirm": true, "reviewReasons": []},
+      "rationale": "The source reuses an existing service. Building a new scheduling platform changes the architecture and scope."
+    },
+    {
+      "id": "content-migration-count-conflict",
+      "kind": "clear",
+      "source": "Transfer the text and images from 12 existing pages into the replacement website.",
+      "candidates": [
+        {"id": "migration", "description": "Populate the new site's templates using content taken from 8 pages of the old site."},
+        {"id": "copywriting", "description": "Write original copy and select stock photography for 12 new pages."},
+        {"id": "review", "description": "Review 12 live pages and supply a list of broken links."}
+      ],
+      "expected": {"bestCandidateId": "migration", "acceptableCandidateIds": ["migration"], "mustNotAutoConfirm": true, "reviewReasons": ["Description page count changes from 12 to 8; flag descriptionNumbersChanged."]},
+      "rationale": "Migration corresponds to migration even when the quantity differs. Matching a number alone would incorrectly select a different service."
+    },
+    {
+      "id": "contact-form-retention-conflict",
+      "kind": "clear",
+      "source": "Send website enquiries to the owner's email address. Do not retain submitted messages on the web server.",
+      "candidates": [
+        {"id": "links", "description": "Add telephone and email links to the contact page."},
+        {"id": "form-with-storage", "description": "Implement an enquiry form that emails the owner and stores every submission in a server database."},
+        {"id": "newsletter", "description": "Connect newsletter subscriptions to an email marketing service."}
+      ],
+      "expected": {"bestCandidateId": "form-with-storage", "acceptableCandidateIds": ["form-with-storage"], "mustNotAutoConfirm": true, "reviewReasons": ["The source prohibits message storage and the candidate requires it; flag a negation or exclusion change and require manual scope review."]},
+      "rationale": "Both describe the enquiry form workflow, but the storage condition conflicts. Correspondence does not establish equivalent scope."
+    },
+    {
+      "id": "editor-handover-training",
+      "kind": "clear",
+      "source": "After launch, show the office team how to edit page text, replace photos and publish news themselves, and leave a recording they can revisit.",
+      "candidates": [
+        {"id": "content-retainer", "description": "A designer will make requested text and image changes on the client's behalf each month."},
+        {"id": "marketing", "description": "Run a workshop about writing persuasive social media posts and measuring campaign results."},
+        {"id": "handover", "description": "Deliver a recorded CMS handover session covering everyday content publishing for nontechnical administrators."}
+      ],
+      "expected": {"bestCandidateId": "handover", "acceptableCandidateIds": ["handover"], "mustNotAutoConfirm": true, "reviewReasons": []},
+      "rationale": "The expected deliverable equips staff to maintain content themselves, with a reusable recording. Ongoing outsourced editing is a different service."
+    },
+    {
+      "id": "page-load-performance",
+      "kind": "clear",
+      "source": "Reduce the time visitors wait for the main page content by resizing oversized photographs and deferring scripts that are not needed immediately.",
+      "candidates": [
+        {"id": "seo", "description": "Research target search phrases and rewrite page titles and meta descriptions."},
+        {"id": "performance", "description": "Optimise image delivery and JavaScript loading to improve the site's initial rendering performance."},
+        {"id": "visual-redesign", "description": "Replace the current photographs and redesign the page typography to refresh the visual style."}
+      ],
+      "expected": {"bestCandidateId": "performance", "acceptableCandidateIds": ["performance"], "mustNotAutoConfirm": true, "reviewReasons": []},
+      "rationale": "The work changes loading behavior and asset delivery. Search copy and aesthetic redesign do not meet this performance objective."
+    },
+    {
+      "id": "traffic-measurement",
+      "kind": "clear",
+      "source": "Set up a way for the owner to see where website visitors come from and which enquiry button they press.",
+      "candidates": [
+        {"id": "analytics", "description": "Configure web analytics with acquisition reporting and conversion events for contact calls to action."},
+        {"id": "search-console", "description": "Submit the sitemap to a search engine and inspect indexing coverage."},
+        {"id": "lead-routing", "description": "Route submitted enquiry forms to the correct sales representative based on location."}
+      ],
+      "expected": {"bestCandidateId": "analytics", "acceptableCandidateIds": ["analytics"], "mustNotAutoConfirm": true, "reviewReasons": []},
+      "rationale": "The requested output is visitor and interaction measurement. Search indexing and lead assignment address different business operations."
+    },
+    {
+      "id": "self-service-editor-no-counterpart",
+      "kind": "reject",
+      "source": "Give staff a browser-based dashboard where they can change opening hours and service descriptions without asking a developer.",
+      "candidates": [
+        {"id": "copywriting", "description": "Rewrite the opening-hours and service-description copy for the public website."},
+        {"id": "articles", "description": "Publish monthly articles describing the company's services."},
+        {"id": "request-handbook", "description": "Provide a PDF handbook explaining how to request website changes from the developer."}
+      ],
+      "expected": {"bestCandidateId": null, "acceptableCandidateIds": [], "mustNotAutoConfirm": true, "reviewReasons": ["None of the candidates supplies a self-service editing interface. Leave unmatched after manual review."]},
+      "rationale": "Shared vocabulary about updating content does not establish the required capability. Record whether the model incorrectly recommends a candidate."
+    },
+    {
+      "id": "maintenance-duration-frequency-ambiguity",
+      "kind": "ambiguous",
+      "source": "For 12 months after handover, install security updates and check uptime every month.",
+      "candidates": [
+        {"id": "long-infrequent", "description": "Provide a 12-month care plan with security patches and availability checks every 3 months."},
+        {"id": "short-frequent", "description": "Provide a 6-month care plan with monthly security patches and availability checks."},
+        {"id": "prelaunch-scan", "description": "Perform a one-time security scan immediately before launch."}
+      ],
+      "expected": {"bestCandidateId": null, "acceptableCandidateIds": ["long-infrequent", "short-frequent"], "mustNotAutoConfirm": true, "reviewReasons": ["One plan changes frequency and the other changes contract duration. Neither is equivalent; require manual review of both.", "Description numbers differ in both plausible candidates."]},
+      "rationale": "Duration and frequency are separate scope dimensions. A single score cannot decide which compromise the buyer intends."
+    },
+    {
+      "id": "design-and-build-split-across-lines",
+      "kind": "ambiguous",
+      "source": "Create the visual design for a campaign landing page and turn the approved design into a live responsive page.",
+      "candidates": [
+        {"id": "design-only", "description": "Prepare an original landing-page layout in Figma, including desktop and mobile design files."},
+        {"id": "build-only", "description": "Develop and publish a responsive landing page from design files supplied by the client."},
+        {"id": "ad-copy", "description": "Write advertising headlines and calls to action for the campaign."}
+      ],
+      "expected": {"bestCandidateId": null, "acceptableCandidateIds": ["design-only", "build-only"], "mustNotAutoConfirm": true, "reviewReasons": ["The source bundles design and implementation, while separate candidates cover only one part each.", "The current one-to-one mapping cannot represent this split completely; preserve the unmatched row and explain the limitation."]},
+      "rationale": "Both candidates are partial counterparts. Automatically accepting either as full equivalence would hide a real scope difference."
+    }
+  ]
+}

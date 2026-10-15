@@ -1,0 +1,27 @@
+{
+  "observedDateChina": "2026-10-15",
+  "environment": "Windows, Chrome 155; served from 127.0.0.1:8774",
+  "source": "Main agent's actual browser interactions and downloaded files",
+  "checks": {
+    "realModelInference": "Passed; see quotemap-browser-model-check.json. Semantic diagnostics are 4 of 7 clear cases, with observed failures.",
+    "initialSuggestionsAreUnconfirmed": "Observed 0 confirmed, 6 unmatched A and 7 unmatched B after AI suggestions.",
+    "manualConfirmation": "Confirmed item 1; observed 1 confirmed, 5 unmatched A, 6 unmatched B.",
+    "duplicateTargets": "The confirmed target was disabled in the other row's visible select options.",
+    "changeClearsConfirmation": "Changed the confirmed row to Leave unmatched; observed confirmed count return to 0.",
+    "scopeFlags": "Visible number-change flag for 5 versus 8 pages and exclusion-change flag for with versus without spam protection.",
+    "aiCsvDownload": "Actual downloaded quotemap-review.csv read back as 6 confirmed pairs and 1 unmatched B. All 6 original A and 7 original B rows retained.",
+    "manualCsvDownload": "Actual downloaded quotemap-review (1).csv read back as 1 confirmed pair, 5 unmatched A and 6 unmatched B. All original rows retained.",
+    "downloadObservationLimit": "The browser automation download event timed out. Actual files in the Downloads directory independently verified that both downloads completed; copies are preserved here.",
+    "mobileLayout": "At 320 by 740 viewport, document clientWidth=305 and scrollWidth=305. Review screen screenshot inspected; no horizontal overflow observed.",
+    "modelFailure": "Temporarily blocked this local page's model URL via browser devtools. The real fetch failed; page displayed the failure, Manual review mode and an enabled manual review button.",
+    "retryAfterFailure": "Removed the URL block and clicked AI again. Observed Local AI suggestions are ready and Local AI suggestions mode. No network override was left in place.",
+    "network": "First synthetic run produced five same-origin GET asset requests and no POST. Recovery run produced four same-origin GET requests with runtime already imported; see quotemap-network-check.json. No quote upload observed in these samples.",
+    "temporaryViewport": "Reset after the mobile check."
+  },
+  "limits": [
+    "Synthetic inputs only; no customer test or money saving claim.",
+    "No Safari, Firefox or mobile-device inference test.",
+    "Offline startup and arbitrary browser extensions are outside the checked behavior.",
+    "The UI review does not establish contract equivalence or general matching accuracy."
+  ]
+}

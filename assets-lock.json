@@ -1,0 +1,37 @@
+{
+  "runtime": "onnxruntime-web@1.30.0",
+  "model": "Xenova/paraphrase-MiniLM-L3-v2",
+  "revision": "4b544e74dfc3256b2b56849ea5d7064fee1ac846",
+  "files": [
+    {
+      "path": "dist/assets/model_quantized.onnx",
+      "bytes": 17452106,
+      "sha256": "b190f50dd46296b9895ae8f274c3455762d08610f8788f4a9bd15019f4f7160c"
+    },
+    {
+      "path": "dist/assets/tokenizer.json",
+      "bytes": 711649,
+      "sha256": "2fc687b11de0bc1b3d8348f92e3b49ef1089a621506c7661fbf3248fcd54947e"
+    },
+    {
+      "path": "dist/vendor/ort-wasm-simd-threaded.mjs",
+      "bytes": 24381,
+      "sha256": "e13f7f94fc51b4ca72b12faeb1ee95f4ace6dfbc8939bc718aabdc0a27c4299b"
+    },
+    {
+      "path": "dist/vendor/ort-wasm-simd-threaded.wasm",
+      "bytes": 14239897,
+      "sha256": "3398c10d07d229bd91b364548e130e0e51a8e5704b88c7c083ebbeb78842dee2"
+    },
+    {
+      "path": "dist/vendor/ort.wasm.min.mjs",
+      "bytes": 50126,
+      "sha256": "219e6a1fc8a9938268d18efca3c91d310bd2f4a59bbd13744df5b2b7fc6cee3b"
+    },
+    {
+      "path": "dist/vendor/runtime-package.json",
+      "bytes": 184,
+      "sha256": "0cec78c249361125cdd3ef88d31eda47ad6c91b8a26193c552db58268cdbff85"
+    }
+  ]
+}

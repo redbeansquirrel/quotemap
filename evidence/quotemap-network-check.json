@@ -1,0 +1,29 @@
+{
+  "observedAtUtc": "2026-10-15T07:18:13.759Z",
+  "mode": "Local AI suggestions",
+  "requests": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8774/dist/assets/model_quantized.onnx",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8774/dist/assets/tokenizer.json",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8774/dist/vendor/ort-wasm-simd-threaded.mjs",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8774/dist/vendor/ort-wasm-simd-threaded.wasm",
+      "hasPostData": false
+    }
+  ],
+  "hasMore": false,
+  "truncated": false,
+  "note": "Synthetic sample run after an intentional model download failure and recovery; no customer quote data used."
+}

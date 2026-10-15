@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#145b50">
+  <meta name="description" content="Compare two freelance website quotes, review local AI matching suggestions, and export your confirmed comparison.">
+  <title>QuoteMap — compare the scope before the price</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to workspace</a>
+  <header class="site-header page-width">
+    <a class="brand" href="./" aria-label="QuoteMap home"><span class="brand-mark" aria-hidden="true">q<span>m</span></span>QuoteMap</a>
+    <span class="privacy-pill"><span class="status-dot" aria-hidden="true"></span> Your quotes stay in this page</span>
+  </header>
+  <main class="page-width">
+    <section class="hero" aria-labelledby="headline">
+      <div><p class="eyebrow">A clearer view of freelance website quotes</p><h1 id="headline">Compare the scope<br>before the <em>price.</em></h1><p class="hero-copy">Different wording can hide different work. Line up two quotes, check what changed, and make the final call yourself.</p></div>
+      <aside class="hero-note"><span class="note-symbol" aria-hidden="true">↔</span><p>Start with what’s included.</p><span>AI suggests the match.<br>You confirm the meaning.</span></aside>
+    </section>
+    <ol class="workflow" aria-label="Comparison workflow"><li><span class="step-number">1</span><span><strong>Add your quotes</strong><small>Paste or upload two CSV files</small></span></li><li><span class="step-number">2</span><span><strong>Review each match</strong><small>Check scope, quantity, and price</small></span></li><li><span class="step-number">3</span><span><strong>Keep your decisions</strong><small>Export a complete CSV review</small></span></li></ol>
+    <section class="workspace panel" id="workspace" aria-labelledby="input-heading">
+      <div class="section-heading"><div><p class="eyebrow">01 / Your inputs</p><h2 id="input-heading">Bring both quotes to the table.</h2></div><button id="load-sample" class="button secondary" type="button">Try a synthetic example <span aria-hidden="true">↗</span></button></div>
+      <p class="section-copy">For small English-language website quotes. Up to 30 line items per quote. Paste the header and rows below, or choose a CSV file.</p>
+      <p class="sample-note" id="sample-note" hidden>Synthetic example loaded. These fictional quotes include changed page counts, different spam protection, and an extra hosting item.</p>
+      <div class="quote-inputs">
+        <div class="quote-input"><div class="quote-label"><label for="quote-a"><span class="quote-letter">A</span>First quote</label><label class="file-button" for="file-a">Choose CSV<span class="sr-only"> for first quote</span></label><input class="file-input" id="file-a" type="file" accept=".csv,text/csv"></div><textarea id="quote-a" spellcheck="false" autocapitalize="off" aria-describedby="csv-format" placeholder="description,quantity,unit,unit_price,currency&#10;Website design,1,project,1200,USD"></textarea><div class="input-footer"><span id="file-name-a">Paste CSV or choose a file</span><span>Quote A</span></div></div>
+        <div class="quote-input"><div class="quote-label"><label for="quote-b"><span class="quote-letter alternate">B</span>Second quote</label><label class="file-button" for="file-b">Choose CSV<span class="sr-only"> for second quote</span></label><input class="file-input" id="file-b" type="file" accept=".csv,text/csv"></div><textarea id="quote-b" spellcheck="false" autocapitalize="off" aria-describedby="csv-format" placeholder="description,quantity,unit,unit_price,currency&#10;Custom website design,1,project,1400,USD"></textarea><div class="input-footer"><span id="file-name-b">Paste CSV or choose a file</span><span>Quote B</span></div></div>
+      </div>
+      <details class="format-details" id="csv-format"><summary>CSV format and limits</summary><div><p>Use exactly these five headers, in any order:</p><code>description,quantity,unit,unit_price,currency</code><p>Quote descriptions containing commas. Descriptions: 1–300 characters. Quantity: greater than 0, up to 1,000,000, with at most 3 decimal places. Unit price: 0–1,000,000, with at most 2 decimal places. Units: 1–30 characters. Currency: a three-letter code such as USD or EUR. Amounts use two decimal places; currencies are never converted.</p></div></details>
+      <div id="input-error" class="error-box" role="alert" hidden></div>
+      <div class="input-actions"><div class="action-buttons"><button class="button primary" id="run-ai" type="button">Suggest matches with local AI <span aria-hidden="true">→</span></button><button class="button text-button" id="manual-review" type="button">Review manually</button></div><p class="load-note">First AI run downloads about 33 MB.<br>Quote text stays in memory in this browser tab.</p></div>
+      <div id="progress-area" class="progress-area" hidden><span class="spinner" aria-hidden="true"></span><p id="progress-text">Preparing local AI…</p></div>
+      <p id="status" class="status-message" role="status" aria-live="polite" aria-atomic="true">Ready when you are. You can explore the synthetic example first.</p>
+    </section>
+    <section id="review-section" class="review-section" aria-labelledby="review-heading" hidden>
+      <div class="section-heading"><div><p class="eyebrow">02 / Check the scope</p><h2 id="review-heading" tabindex="-1">A suggestion is a starting point.</h2></div><span class="mode-badge" id="review-mode">Manual review</span></div>
+      <p class="section-copy" id="review-explanation">Choose a line from Quote B for each line in Quote A, then confirm the match. Unmatched items remain in your export.</p>
+      <div id="quote-totals" class="quote-totals"></div>
+      <div class="review-guidance"><span aria-hidden="true">↳</span><p><strong>Confirm the same work, then compare the cost.</strong> Similar wording may still describe different scope. Differences below are B minus A and do not imply savings.</p></div>
+      <div id="review-list" class="review-list"></div>
+      <div class="panel unmatched-panel"><h3>Items still outside the map</h3><p>These lines have no confirmed counterpart. Check exclusions and extras before deciding.</p><div id="unmatched-list" class="unmatched-columns"></div></div>
+    </section>
+    <section id="export-section" class="panel export-section" aria-labelledby="export-heading" hidden>
+      <div class="section-heading"><div><p class="eyebrow">03 / Keep the full picture</p><h2 id="export-heading">Your reviewed comparison.</h2></div><button id="export-csv" class="button primary" type="button">Export review CSV <span aria-hidden="true">↓</span></button></div>
+      <div id="review-summary" class="summary-grid" aria-live="polite" aria-atomic="true"></div>
+      <p class="export-note">The export includes every original line, confirmed matches, unmatched items, scope flags, and comparable price differences. Only your confirmed pairings count as matches.</p>
+    </section>
+    <details class="technical-details"><summary>Local AI: data handling and current limits <span aria-hidden="true">+</span></summary><div>
+      <p>QuoteMap uses an open MiniLM embedding model to compare descriptions in this browser. Model and runtime files download from this site. QuoteMap’s code does not upload your quote text, send it to an inference API, save it to local storage, or track it with analytics. Reloading the page clears your quotes and review.</p>
+      <p>This tool is designed for small English-language website quotes and supports one-to-one matches only. Bundled work or scope split across several lines needs manual checking. The AI can rank the wrong item highly, so review every pairing yourself before confirming it.</p>
+      <p>In a diagnostic check of seven synthetic matching cases, the expected item ranked first in 4 of 7 cases. This small check does not establish general accuracy. Similarity scores describe how close the model’s text representations are; they do not guarantee equal scope. Quantities and prices use deterministic arithmetic.</p>
+      <p id="model-status">AI has not been loaded in this session.</p><pre id="model-metadata" hidden></pre>
+    </div></details>
+  </main>
+  <footer class="site-footer page-width"><a class="brand footer-brand" href="./">QuoteMap</a><p>Less guesswork. A more considered decision.</p><span>Built for careful comparison.</span></footer>
+</body>
+</html>

@@ -1,0 +1,8 @@
+﻿"decision","a_row","a_description","a_quantity","a_unit","a_unit_price","a_currency","a_total","b_row","b_description","b_quantity","b_unit","b_unit_price","b_currency","b_total","scope_flags","unit_price_change_b_minus_a","line_total_change_b_minus_a"
+"confirmed","1","Discovery workshop","1","session","250.00","USD","250.00","1","Project discovery session","1","session","300.00","USD","300.00","","50.00","50.00"
+"confirmed","2","Responsive website (5 pages)","1","project","1400.00","USD","1400.00","2","Responsive website (8 pages)","1","project","1900.00","USD","1900.00","Numbers in scope differ","500.00","500.00"
+"confirmed","3","Custom visual design","1","project","850.00","USD","850.00","3","Bespoke user interface design","1","project","750.00","USD","750.00","","-100.00","-100.00"
+"confirmed","4","Contact form with spam protection","1","form","180.00","USD","180.00","4","Contact form without spam protection","1","form","100.00","USD","100.00","Inclusion or exclusion wording differs","-80.00","-80.00"
+"confirmed","5","CMS setup and editor training","1","project","320.00","USD","320.00","5","CMS configuration and handover training","1","project","280.00","USD","280.00","","-40.00","-40.00"
+"confirmed","6","Accessibility review","1","audit","240.00","USD","240.00","6","Accessibility audit","1","audit","275.00","USD","275.00","","35.00","35.00"
+"unmatched_b","","","","","","","","7","Hosting and support","12","month","25.00","USD","300.00","","",""

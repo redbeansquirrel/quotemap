@@ -1,0 +1,8 @@
+node_modules/
+*.tgz
+*.tar
+*.zip
+.openai/*
+!.openai/hosting.json
+__pycache__/
+tests/results/

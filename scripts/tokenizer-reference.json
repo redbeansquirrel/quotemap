@@ -1,0 +1,491 @@
+{
+  "reference": "Hugging Face Tokenizers 0.22.2, pinned tokenizer JSON",
+  "cases": [
+    {
+      "text": "Homepage design",
+      "ids": [
+        101,
+        2188,
+        13704,
+        2640,
+        102
+      ]
+    },
+    {
+      "text": "Responsive website implementation",
+      "ids": [
+        101,
+        26651,
+        4037,
+        7375,
+        102
+      ]
+    },
+    {
+      "text": "Email support for 30 days",
+      "ids": [
+        101,
+        10373,
+        2490,
+        2005,
+        2382,
+        2420,
+        102
+      ]
+    },
+    {
+      "text": "Website support for 7 days",
+      "ids": [
+        101,
+        4037,
+        2490,
+        2005,
+        1021,
+        2420,
+        102
+      ]
+    },
+    {
+      "text": "Technical search engine optimisation",
+      "ids": [
+        101,
+        4087,
+        3945,
+        3194,
+        23569,
+        27605,
+        26652,
+        102
+      ]
+    },
+    {
+      "text": "Design & build: 5 pages, $1,250.50",
+      "ids": [
+        101,
+        2640,
+        1004,
+        3857,
+        1024,
+        1019,
+        5530,
+        1010,
+        1002,
+        1015,
+        1010,
+        5539,
+        1012,
+        2753,
+        102
+      ]
+    },
+    {
+      "text": "A quote with \"double quotes\" and a comma, here.",
+      "ids": [
+        101,
+        1037,
+        14686,
+        2007,
+        1000,
+        3313,
+        16614,
+        1000,
+        1998,
+        1037,
+        4012,
+        2863,
+        1010,
+        2182,
+        1012,
+        102
+      ]
+    },
+    {
+      "text": "NO hosting included",
+      "ids": [
+        101,
+        2053,
+        9936,
+        2443,
+        102
+      ]
+    },
+    {
+      "text": "Without hosting or a domain",
+      "ids": [
+        101,
+        2302,
+        9936,
+        2030,
+        1037,
+        5884,
+        102
+      ]
+    },
+    {
+      "text": "mobile-friendly layout",
+      "ids": [
+        101,
+        4684,
+        1011,
+        5379,
+        9621,
+        102
+      ]
+    },
+    {
+      "text": "Café branding and naïve typography",
+      "ids": [
+        101,
+        7668,
+        16140,
+        1998,
+        15743,
+        5939,
+        6873,
+        12565,
+        102
+      ]
+    },
+    {
+      "text": "Straße",
+      "ids": [
+        101,
+        2358,
+        27807,
+        102
+      ]
+    },
+    {
+      "text": "\tSame\nwords\rhere",
+      "ids": [
+        101,
+        2168,
+        2616,
+        2182,
+        102
+      ]
+    },
+    {
+      "text": "Menu layout",
+      "ids": [
+        101,
+        12183,
+        9621,
+        102
+      ]
+    },
+    {
+      "text": "Hello​World",
+      "ids": [
+        101,
+        7592,
+        11108,
+        102
+      ]
+    },
+    {
+      "text": "Support [MASK] days",
+      "ids": [
+        101,
+        2490,
+        103,
+        2420,
+        102
+      ]
+    },
+    {
+      "text": "[CLS] [SEP] [PAD] [UNK]",
+      "ids": [
+        101,
+        101,
+        102,
+        0,
+        100,
+        102
+      ]
+    },
+    {
+      "text": "报价对齐与数量检查",
+      "ids": [
+        101,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        102
+      ]
+    },
+    {
+      "text": "A — B – C … D",
+      "ids": [
+        101,
+        1037,
+        1517,
+        1038,
+        1516,
+        1039,
+        1529,
+        1040,
+        102
+      ]
+    },
+    {
+      "text": "Copyright © 2026",
+      "ids": [
+        101,
+        9385,
+        1075,
+        16798,
+        2575,
+        102
+      ]
+    },
+    {
+      "text": "Emoji U0001f60a layout",
+      "ids": [
+        101,
+        7861,
+        29147,
+        2072,
+        1057,
+        8889,
+        24096,
+        2546,
+        16086,
+        2050,
+        9621,
+        102
+      ]
+    },
+    {
+      "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "ids": [
+        101,
+        100,
+        102
+      ]
+    },
+    {
+      "text": "upload 10.5 pages",
+      "ids": [
+        101,
+        2039,
+        11066,
+        2184,
+        1012,
+        1019,
+        5530,
+        102
+      ]
+    },
+    {
+      "text": "Email\u0000support�",
+      "ids": [
+        101,
+        22028,
+        6279,
+        6442,
+        102
+      ]
+    },
+    {
+      "text": "Monthly / annual / one-time",
+      "ids": [
+        101,
+        7058,
+        1013,
+        3296,
+        1013,
+        2028,
+        1011,
+        2051,
+        102
+      ]
+    },
+    {
+      "text": "SETUP then support",
+      "ids": [
+        101,
+        16437,
+        2059,
+        2490,
+        102
+      ]
+    },
+    {
+      "text": "İstanbul design",
+      "ids": [
+        101,
+        9960,
+        2640,
+        102
+      ]
+    },
+    {
+      "text": "Polish lódź interface",
+      "ids": [
+        101,
+        3907,
+        8840,
+        2094,
+        2480,
+        8278,
+        102
+      ]
+    },
+    {
+      "text": "---___+++",
+      "ids": [
+        101,
+        1011,
+        1011,
+        1011,
+        1035,
+        1035,
+        1035,
+        1009,
+        1009,
+        1009,
+        102
+      ]
+    },
+    {
+      "text": "Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable Deliverable ",
+      "ids": [
+        101,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        8116,
+        3085,
+        102
+      ]
+    }
+  ]
+}

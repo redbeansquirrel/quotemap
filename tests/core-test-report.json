@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "testScope": "CSV, exact money, currencies, suggestion rules, manual correspondence and CSV export",
+  "implementationReadBeforeFreeze": false,
+  "expectedCasesFrozenBeforeExecution": true,
+  "command": "node --test tests/core.test.mjs",
+  "tests": 47,
+  "passed": 47,
+  "failed": 0,
+  "skipped": 0,
+  "cancelled": 0,
+  "rawOutput": "tests/core-test-first-run.txt",
+  "semantic": {
+    "fixture": "tests/semantic-cases.json",
+    "cases": 10,
+    "clear": 7,
+    "ambiguous": 2,
+    "reject": 1,
+    "executionStatus": "not run by independent evaluator; requires genuine browser inference",
+    "claimedPass": false
+  },
+  "limitations": [
+    "This suite tests core data behavior, not UI state, responsive rendering or network traffic.",
+    "Semantic labels do not establish model accuracy or reliable rejection until genuine inference is observed."
+  ],
+  "externalWrites": false
+}

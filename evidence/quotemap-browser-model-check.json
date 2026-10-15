@@ -1,0 +1,368 @@
+{
+  "completedAtUtc": "2026-10-15T07:07:13.389Z",
+  "actualRuntime": {
+    "model": "Xenova/paraphrase-MiniLM-L3-v2",
+    "revision": "4b544e74dfc3256b2b56849ea5d7064fee1ac846",
+    "modelSha256": "b190f50dd46296b9895ae8f274c3455762d08610f8788f4a9bd15019f4f7160c",
+    "runtimeVersion": "1.30.0",
+    "provider": "WebAssembly CPU",
+    "dimensions": 384,
+    "loadMs": 1177
+  },
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "tokenizerParity": {
+    "passed": 30,
+    "total": 30,
+    "failed": []
+  },
+  "clearSemanticTop1": {
+    "passed": 4,
+    "total": 7
+  },
+  "semanticCases": [
+    {
+      "id": "responsive-implementation",
+      "kind": "clear",
+      "source": "Turn the approved screen designs into a working website that remains usable on phones, tablets, and desktop computers.",
+      "expected": {
+        "bestCandidateId": "implementation",
+        "acceptableCandidateIds": [
+          "implementation"
+        ],
+        "mustNotAutoConfirm": true,
+        "reviewReasons": []
+      },
+      "ranking": [
+        {
+          "id": "implementation",
+          "description": "Implement the supplied layouts with responsive behaviour across screen sizes.",
+          "score": 0.5210280024664135
+        },
+        {
+          "id": "audit",
+          "description": "Audit an existing website and deliver a mobile usability report.",
+          "score": 0.40678691900080705
+        },
+        {
+          "id": "brand",
+          "description": "Produce a visual identity package with logo variants and brand colours.",
+          "score": 0.3383850973958326
+        }
+      ],
+      "top1MatchesExpected": true,
+      "suggestionAboveThreshold": true,
+      "ambiguousByGap": false
+    },
+    {
+      "id": "appointment-booking-integration",
+      "kind": "clear",
+      "source": "Let visitors choose an available consultation slot on the website, using the business's existing Calendly account.",
+      "expected": {
+        "bestCandidateId": "embed",
+        "acceptableCandidateIds": [
+          "embed"
+        ],
+        "mustNotAutoConfirm": true,
+        "reviewReasons": []
+      },
+      "ranking": [
+        {
+          "id": "embed",
+          "description": "Connect and embed the client's current third-party appointment scheduler so customers can book online.",
+          "score": 0.42794449656223266
+        },
+        {
+          "id": "events",
+          "description": "Create a public events listing with dates, locations and links to event details.",
+          "score": 0.36371441924012815
+        },
+        {
+          "id": "custom-system",
+          "description": "Design a bespoke scheduling platform with staff rosters, resource allocation and a new booking database.",
+          "score": 0.3469758989122526
+        }
+      ],
+      "top1MatchesExpected": true,
+      "suggestionAboveThreshold": true,
+      "ambiguousByGap": true
+    },
+    {
+      "id": "content-migration-count-conflict",
+      "kind": "clear",
+      "source": "Transfer the text and images from 12 existing pages into the replacement website.",
+      "expected": {
+        "bestCandidateId": "migration",
+        "acceptableCandidateIds": [
+          "migration"
+        ],
+        "mustNotAutoConfirm": true,
+        "reviewReasons": [
+          "Description page count changes from 12 to 8; flag descriptionNumbersChanged."
+        ]
+      },
+      "ranking": [
+        {
+          "id": "migration",
+          "description": "Populate the new site's templates using content taken from 8 pages of the old site.",
+          "score": 0.5640694087821646
+        },
+        {
+          "id": "copywriting",
+          "description": "Write original copy and select stock photography for 12 new pages.",
+          "score": 0.5283561943527008
+        },
+        {
+          "id": "review",
+          "description": "Review 12 live pages and supply a list of broken links.",
+          "score": 0.38697025858166295
+        }
+      ],
+      "top1MatchesExpected": true,
+      "suggestionAboveThreshold": true,
+      "ambiguousByGap": true
+    },
+    {
+      "id": "contact-form-retention-conflict",
+      "kind": "clear",
+      "source": "Send website enquiries to the owner's email address. Do not retain submitted messages on the web server.",
+      "expected": {
+        "bestCandidateId": "form-with-storage",
+        "acceptableCandidateIds": [
+          "form-with-storage"
+        ],
+        "mustNotAutoConfirm": true,
+        "reviewReasons": [
+          "The source prohibits message storage and the candidate requires it; flag a negation or exclusion change and require manual scope review."
+        ]
+      },
+      "ranking": [
+        {
+          "id": "form-with-storage",
+          "description": "Implement an enquiry form that emails the owner and stores every submission in a server database.",
+          "score": 0.5673927479312751
+        },
+        {
+          "id": "newsletter",
+          "description": "Connect newsletter subscriptions to an email marketing service.",
+          "score": 0.37911196006060904
+        },
+        {
+          "id": "links",
+          "description": "Add telephone and email links to the contact page.",
+          "score": 0.3717701025946887
+        }
+      ],
+      "top1MatchesExpected": true,
+      "suggestionAboveThreshold": true,
+      "ambiguousByGap": false
+    },
+    {
+      "id": "editor-handover-training",
+      "kind": "clear",
+      "source": "After launch, show the office team how to edit page text, replace photos and publish news themselves, and leave a recording they can revisit.",
+      "expected": {
+        "bestCandidateId": "handover",
+        "acceptableCandidateIds": [
+          "handover"
+        ],
+        "mustNotAutoConfirm": true,
+        "reviewReasons": []
+      },
+      "ranking": [
+        {
+          "id": "content-retainer",
+          "description": "A designer will make requested text and image changes on the client's behalf each month.",
+          "score": 0.37872923898534105
+        },
+        {
+          "id": "marketing",
+          "description": "Run a workshop about writing persuasive social media posts and measuring campaign results.",
+          "score": 0.373090505479575
+        },
+        {
+          "id": "handover",
+          "description": "Deliver a recorded CMS handover session covering everyday content publishing for nontechnical administrators.",
+          "score": 0.33906200081896726
+        }
+      ],
+      "top1MatchesExpected": false,
+      "suggestionAboveThreshold": true,
+      "ambiguousByGap": true
+    },
+    {
+      "id": "page-load-performance",
+      "kind": "clear",
+      "source": "Reduce the time visitors wait for the main page content by resizing oversized photographs and deferring scripts that are not needed immediately.",
+      "expected": {
+        "bestCandidateId": "performance",
+        "acceptableCandidateIds": [
+          "performance"
+        ],
+        "mustNotAutoConfirm": true,
+        "reviewReasons": []
+      },
+      "ranking": [
+        {
+          "id": "visual-redesign",
+          "description": "Replace the current photographs and redesign the page typography to refresh the visual style.",
+          "score": 0.5351832665959878
+        },
+        {
+          "id": "performance",
+          "description": "Optimise image delivery and JavaScript loading to improve the site's initial rendering performance.",
+          "score": 0.4201749528046874
+        },
+        {
+          "id": "seo",
+          "description": "Research target search phrases and rewrite page titles and meta descriptions.",
+          "score": 0.2990911018141522
+        }
+      ],
+      "top1MatchesExpected": false,
+      "suggestionAboveThreshold": true,
+      "ambiguousByGap": false
+    },
+    {
+      "id": "traffic-measurement",
+      "kind": "clear",
+      "source": "Set up a way for the owner to see where website visitors come from and which enquiry button they press.",
+      "expected": {
+        "bestCandidateId": "analytics",
+        "acceptableCandidateIds": [
+          "analytics"
+        ],
+        "mustNotAutoConfirm": true,
+        "reviewReasons": []
+      },
+      "ranking": [
+        {
+          "id": "lead-routing",
+          "description": "Route submitted enquiry forms to the correct sales representative based on location.",
+          "score": 0.4132439594094261
+        },
+        {
+          "id": "search-console",
+          "description": "Submit the sitemap to a search engine and inspect indexing coverage.",
+          "score": 0.3475380083538354
+        },
+        {
+          "id": "analytics",
+          "description": "Configure web analytics with acquisition reporting and conversion events for contact calls to action.",
+          "score": 0.28565443647262606
+        }
+      ],
+      "top1MatchesExpected": false,
+      "suggestionAboveThreshold": true,
+      "ambiguousByGap": true
+    },
+    {
+      "id": "self-service-editor-no-counterpart",
+      "kind": "reject",
+      "source": "Give staff a browser-based dashboard where they can change opening hours and service descriptions without asking a developer.",
+      "expected": {
+        "bestCandidateId": null,
+        "acceptableCandidateIds": [],
+        "mustNotAutoConfirm": true,
+        "reviewReasons": [
+          "None of the candidates supplies a self-service editing interface. Leave unmatched after manual review."
+        ]
+      },
+      "ranking": [
+        {
+          "id": "copywriting",
+          "description": "Rewrite the opening-hours and service-description copy for the public website.",
+          "score": 0.5806005063848075
+        },
+        {
+          "id": "request-handbook",
+          "description": "Provide a PDF handbook explaining how to request website changes from the developer.",
+          "score": 0.4236536483117478
+        },
+        {
+          "id": "articles",
+          "description": "Publish monthly articles describing the company's services.",
+          "score": 0.2986920482075079
+        }
+      ],
+      "top1MatchesExpected": null,
+      "suggestionAboveThreshold": true,
+      "ambiguousByGap": false
+    },
+    {
+      "id": "maintenance-duration-frequency-ambiguity",
+      "kind": "ambiguous",
+      "source": "For 12 months after handover, install security updates and check uptime every month.",
+      "expected": {
+        "bestCandidateId": null,
+        "acceptableCandidateIds": [
+          "long-infrequent",
+          "short-frequent"
+        ],
+        "mustNotAutoConfirm": true,
+        "reviewReasons": [
+          "One plan changes frequency and the other changes contract duration. Neither is equivalent; require manual review of both.",
+          "Description numbers differ in both plausible candidates."
+        ]
+      },
+      "ranking": [
+        {
+          "id": "long-infrequent",
+          "description": "Provide a 12-month care plan with security patches and availability checks every 3 months.",
+          "score": 0.6467679039469318
+        },
+        {
+          "id": "short-frequent",
+          "description": "Provide a 6-month care plan with monthly security patches and availability checks.",
+          "score": 0.5794866636676699
+        },
+        {
+          "id": "prelaunch-scan",
+          "description": "Perform a one-time security scan immediately before launch.",
+          "score": 0.33238226517831604
+        }
+      ],
+      "top1MatchesExpected": null,
+      "suggestionAboveThreshold": true,
+      "ambiguousByGap": true
+    },
+    {
+      "id": "design-and-build-split-across-lines",
+      "kind": "ambiguous",
+      "source": "Create the visual design for a campaign landing page and turn the approved design into a live responsive page.",
+      "expected": {
+        "bestCandidateId": null,
+        "acceptableCandidateIds": [
+          "design-only",
+          "build-only"
+        ],
+        "mustNotAutoConfirm": true,
+        "reviewReasons": [
+          "The source bundles design and implementation, while separate candidates cover only one part each.",
+          "The current one-to-one mapping cannot represent this split completely; preserve the unmatched row and explain the limitation."
+        ]
+      },
+      "ranking": [
+        {
+          "id": "build-only",
+          "description": "Develop and publish a responsive landing page from design files supplied by the client.",
+          "score": 0.6568985355164477
+        },
+        {
+          "id": "design-only",
+          "description": "Prepare an original landing-page layout in Figma, including desktop and mobile design files.",
+          "score": 0.5884256059022482
+        },
+        {
+          "id": "ad-copy",
+          "description": "Write advertising headlines and calls to action for the campaign.",
+          "score": 0.29970164910062685
+        }
+      ],
+      "top1MatchesExpected": null,
+      "suggestionAboveThreshold": true,
+      "ambiguousByGap": true
+    }
+  ],
+  "elapsedMs": 2166,
+  "boundary": "Synthetic independent diagnostic cases, not customer testing or a measured business outcome. Ambiguous/reject cases are observations, not counted as accuracy; all matches still require human confirmation."
+}
