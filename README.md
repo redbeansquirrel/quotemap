@@ -6,10 +6,10 @@ QuoteMap compares two small English-language CSV quotes for freelance website wo
 
 The application is implemented and has been exercised locally in **Chrome 155 on Windows 10**. Independent core tests passed **47/47**. The semantic evaluation also exposed substantial limits: the expected candidate ranked first in **4 of 7 clear cases**, and one case with no valid counterpart still received a recommendation.
 
-- Public repository: **[PUBLIC_REPOSITORY_URL]**
-- Public demo or video: **[PUBLIC_DEMO_OR_VIDEO_URL]**
+- [Public repository](https://github.com/redbeansquirrel/quotemap)
+- [Public live demo](https://redbeansquirrel.github.io/quotemap/)
 
-These two public links remain pending. The local application and verification results below are available; a public deployment or DEV submission is not claimed.
+The source is public and GitHub Pages has built the static demo. The verification below distinguishes local tests from publication. The DEV article is being prepared for publication.
 
 ## Use it
 
@@ -63,7 +63,7 @@ The three clear-case failures confused CMS training with an editing retainer, pa
 
 One model diagnostic run recorded **1,177 ms** for model loading and **2,166 ms** for the complete diagnostic run. These are single-run local observations, with no repeated timing study or cold-cache guarantee.
 
-The saved browser receipts are named `quotemap-browser-model-check.json`, `quotemap-network-check.json`, `quotemap-ai-review.csv`, `quotemap-manual-review.csv` and `quotemap-mobile.png`. The earlier independent core report records semantic execution as pending at that stage; the later browser run produced the semantic observations above.
+Saved evidence: [real model diagnostics](evidence/quotemap-browser-model-check.json), [browser workflow](evidence/browser-workflow-check.json), [network observation](evidence/quotemap-network-check.json), [AI-assisted export](evidence/quotemap-ai-review.csv), [manual export](evidence/quotemap-manual-review.csv) and [mobile screenshot](evidence/quotemap-mobile.png). The earlier independent core report records semantic execution as pending at that stage; the later browser run produced the semantic observations above.
 
 ## Data handling and remaining limits
 
@@ -81,6 +81,6 @@ Application code and documentation use the [MIT License](LICENSE). Model, tokeni
 
 ## Project and submission status
 
-QuoteMap's new workflow and application code began on **15 October 2026**. [SUBMISSION.md](SUBMISSION.md) is the unpublished English article for the [DEV Week 2 Side Hustle challenge](https://dev.to/challenges/hacktoberfest-week2-2026-10-12). The [entry period](https://dev.to/page/hacktoberfest-week2-2026-10-12-contest-rules) ends **18 October 2026 at 23:59 PDT**, or **19 October at 14:59 in China**. Public code and a deployed demo or video are still required before submission.
+QuoteMap's new workflow and application code began on **15 October 2026**. [SUBMISSION.md](SUBMISSION.md) is the English article being prepared for the [DEV Week 2 Side Hustle challenge](https://dev.to/challenges/hacktoberfest-week2-2026-10-12). The [entry period](https://dev.to/page/hacktoberfest-week2-2026-10-12-contest-rules) ends **18 October 2026 at 23:59 PDT**, or **19 October at 14:59 in China**. The public repository and live demo are linked above.
 
 AI agents produced this application, its evaluation materials and this write-up under human direction. The article's disclosure is **Fully Autonomous** (`ai_disclosure_level: fully_autonomous`). No partner prize category, customer adoption, competition award or income is claimed.

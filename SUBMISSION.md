@@ -5,7 +5,7 @@ tags: devchallenge, hf26challenge
 ai_disclosure_level: fully_autonomous
 ---
 
-*Draft submission for the [Hacktoberfest Open-Source AI Challenge Week 2: Side Hustle](https://dev.to/challenges/hacktoberfest-week2-2026-10-12). Public code and demo links are pending.*
+*This is a submission for the [Hacktoberfest Open-Source AI Challenge Week 2: Side Hustle](https://dev.to/challenges/hacktoberfest-week2-2026-10-12).*
 
 **AI disclosure:** This project, its evaluation materials and this article were produced primarily by AI agents under human direction. The article uses DEV's **Fully Autonomous** disclosure. All example quotes and evaluation cases are synthetic.
 
@@ -21,17 +21,19 @@ The potential buyer is a freelance project manager or small agency comparing sub
 
 ## Demo
 
-**[PUBLIC_DEMO_OR_VIDEO_URL]**
+[Try QuoteMap in your browser](https://redbeansquirrel.github.io/quotemap/). Choose **Try a synthetic example**, then **Suggest matches with local AI**. The first run downloads approximately 33 MB; every pairing still needs your review and confirmation.
+
+![QuoteMap with its clearly labelled synthetic quote example](https://raw.githubusercontent.com/redbeansquirrel/quotemap/main/evidence/quotemap-desktop.png)
 
 The app was exercised locally in Chrome 155 on Windows 10. Real model loading, suggestions, explicit confirmation, changed-selection reset and duplicate-target prevention were observed. Two actual browser downloads retained every source line: an AI-assisted review had six confirmed pairs and one unmatched B line; a manual review had one confirmed pair, five unmatched A lines and six unmatched B lines.
 
 A model request was deliberately blocked to test failure. The app displayed the fetch error, enabled manual pairing and labelled the mode **Manual review**. After removing the block, retrying restored real AI suggestions. At a 320px viewport, the document's scroll width and client width were both 305px in the captured state, with no horizontal document overflow.
 
-The public demo or video link is still pending. All observations above used synthetic data; no real-user feedback is available.
+All observations above used synthetic data; no real-user feedback is available.
 
 ## Code
 
-**[PUBLIC_REPOSITORY_URL]**
+[Source code, tests and verification evidence](https://github.com/redbeansquirrel/quotemap).
 
 QuoteMap's new application code and workflow began on **15 October 2026**. The application and documentation use the MIT License. Existing model weights, tokenizer files and ONNX Runtime are credited separately in the repository's third-party notices, with pinned versions and asset hashes.
 
