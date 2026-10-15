@@ -8,8 +8,9 @@ The application is implemented and has been exercised locally in **Chrome 155 on
 
 - [Public repository](https://github.com/redbeansquirrel/quotemap)
 - [Public live demo](https://redbeansquirrel.github.io/quotemap/)
+- [Published DEV submission](https://dev.to/redbeansquirrel/quotemap-compare-the-scope-before-the-price-53bj)
 
-The source is public and GitHub Pages has built the static demo. The verification below distinguishes local tests from publication. The DEV article is being prepared for publication.
+The source, GitHub Pages demo and DEV submission were published on 15 October 2026. The public demo successfully ran the real model in Chrome. Public API readback matched the demo HTML and article body; the article displays the Week 2 submission badge and Fully Autonomous disclosure. Competition eligibility, awards and income remain unconfirmed.
 
 ## Use it
 
@@ -81,6 +82,6 @@ Application code and documentation use the [MIT License](LICENSE). Model, tokeni
 
 ## Project and submission status
 
-QuoteMap's new workflow and application code began on **15 October 2026**. [SUBMISSION.md](SUBMISSION.md) is the English article being prepared for the [DEV Week 2 Side Hustle challenge](https://dev.to/challenges/hacktoberfest-week2-2026-10-12). The [entry period](https://dev.to/page/hacktoberfest-week2-2026-10-12-contest-rules) ends **18 October 2026 at 23:59 PDT**, or **19 October at 14:59 in China**. The public repository and live demo are linked above.
+QuoteMap's new workflow and application code began on **15 October 2026**. [SUBMISSION.md](SUBMISSION.md) preserves the English article [published on DEV](https://dev.to/redbeansquirrel/quotemap-compare-the-scope-before-the-price-53bj) for the [Week 2 Side Hustle challenge](https://dev.to/challenges/hacktoberfest-week2-2026-10-12). The [entry period](https://dev.to/page/hacktoberfest-week2-2026-10-12-contest-rules) ends **18 October 2026 at 23:59 PDT**, or **19 October at 14:59 in China**. The public repository and live demo are linked above.
 
 AI agents produced this application, its evaluation materials and this write-up under human direction. The article's disclosure is **Fully Autonomous** (`ai_disclosure_level: fully_autonomous`). No partner prize category, customer adoption, competition award or income is claimed.

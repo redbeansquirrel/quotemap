@@ -1,6 +1,6 @@
 ---
 title: "QuoteMap: compare the scope before the price"
-published: false
+published: true
 tags: devchallenge, hf26challenge
 ai_disclosure_level: fully_autonomous
 ---
